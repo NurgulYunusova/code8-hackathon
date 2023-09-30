@@ -1,0 +1,165 @@
+@import "../../../assets/sass/variables.scss";
+@import "../../../assets/sass/mixins.scss";
+
+.login {
+  width: 100%;
+  height: 100vh;
+
+  &Container {
+    width: 100%;
+    height: 100vh;
+    @include center();
+    gap: 60px;
+    padding: 30px;
+
+    .form {
+      width: 50%;
+      @include center();
+
+      &Container {
+        width: 50%;
+        @include center($align-items: flex-start);
+        flex-direction: column;
+
+        h3 {
+          font-family: $base-font1;
+          color: $base-color1;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 36px;
+          margin-bottom: 28px;
+        }
+
+        form {
+          width: 342px;
+
+          label {
+            font-family: $base-font1;
+            color: $base-color4;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+          }
+
+          .input {
+            @include center($justify-content: flex-start);
+            height: 43px;
+            padding: 6px 12px;
+            gap: 10px;
+            border-radius: 4px;
+            border: 1px solid $base-color3;
+            position: relative;
+
+            .icon {
+              @include center();
+
+              .fa-eye,
+              .fa-eye-slash {
+                position: absolute;
+                right: 12px;
+                width: 16px;
+                height: 16px;
+                color: #a2a2a6;
+                cursor: pointer;
+              }
+            }
+
+            input {
+              border: none;
+              outline: none;
+
+              &::placeholder {
+                font-family: $base-font1;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                color: $base-color3;
+              }
+            }
+          }
+
+          p {
+            font-family: $base-font1;
+            font-size: 12px;
+          }
+
+          .infos {
+            @include center($justify-content: space-between);
+            margin-top: 17px;
+
+            .checkbox {
+              @include center();
+              gap: 8px;
+
+              .checkboxIcon {
+                width: 16px;
+                height: 16px;
+                border-radius: 4px;
+                border: 2px solid #667085;
+                background: #fff;
+              }
+
+              p {
+                color: $base-color3;
+                font-family: $base-font1;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 16px;
+              }
+            }
+
+            .forgotPasswordLink {
+              font-family: $base-font1;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 16px;
+
+              a {
+                color: #2805ff;
+                text-decoration: none;
+              }
+            }
+          }
+
+          button {
+            width: 100%;
+            padding: 13px 10px;
+            @include center();
+            margin-top: 55px;
+            color: #fff;
+            text-align: center;
+            font-family: $base-font1;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            border-radius: 6px;
+            background-color: $base-color2;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background-color: #9088c2;
+            }
+          }
+        }
+      }
+    }
+
+    .image {
+      width: 50%;
+      @include center();
+
+      img {
+        width: 65%;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../assets/sass/variables.scss";
+@import "../../assets/sass/mixins.scss";
+
+.calendar {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .image {
+    width: 100%;
+    @include center();
+
+    img {
+      width: 900px;
+      height: 650px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../assets/sass/variables.scss";
+@import "../../assets/sass/mixins.scss";
+
+.sidebar {
+  width: 25%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+
+  &Container {
+    padding: 30px 25px;
+
+    .top {
+      @include center($justify-content: flex-start);
+      gap: 8px;
+      margin-bottom: 65px;
+
+      h2 {
+        color: #000;
+        font-family: $base-font1;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.26px;
+      }
+    }
+
+    .choices {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
+
+      .choice {
+        @include center($justify-content: flex-start);
+        gap: 14px;
+        position: relative;
+        padding: 14px 11px;
+        cursor: pointer;
+        transition: all 0.2 ease-in-out;
+
+        .iconn {
+          color: #9197b3;
+        }
+
+        p {
+          color: #9197b3;
+          font-family: $base-font1;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.14px;
+        }
+
+        .angleIcon {
+          position: absolute;
+          right: 10px;
+          @include center();
+        }
+      }
+
+      .choice.active {
+        border-radius: 8px;
+        background: #5932ea;
+
+        p {
+          color: #fff;
+        }
+
+        .iconn {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
